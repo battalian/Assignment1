@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hi</title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+
+
+
+<body>
+
+	<input oninput="console.log('User entered Text')"  type="text" name="enter">	
+	
+	<br> <br>
+	<button onclick="clearPage()">Alert</button> <br> <br>
+	<button onclick="clearPageWithConfirmation()">Confirm</button> <br>
+	<br><button onclick="student_creator()">Prompt</button>
+
+	<h2 id="unique_id"> </h2>
+
+</body>
+
+
+<script>
+	function clearPage() {
+		 alert("go");
+		document.write("");
+	}
+
+	function clearPageWithConfirmation() {
+		var r = confirm("Removing this Page");
+		if(r)
+		{
+			document.write("");
+		}
+	}
+
+	function clearPageWithPrompt() {
+		var r = prompt("Type Y/N for removing");
+		if(r)
+		{
+			
+			//var go = document.getElementById("unique_id");
+			//go.innerHTML = r;
+
+			var go = document.createElement("button");
+			go.innerHTML = r;
+			document.body.appendChild(go); 	
+
+		}
+}
+</script>
+
+</html>
+
+
